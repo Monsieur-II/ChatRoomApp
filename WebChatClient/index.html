@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WebChat</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<header class="header">💬 WebChat</header>
+			<section class="message-section" id="messageSection">
+				<!-- left side -->
+				<div class="msg-box received">hi</div>
+				<!-- right side -->
+				<div class="msg-box sent">hello</div>
+			</section>
+
+			<section class="input-section">
+				<input
+					id="txt-message"
+					type="text"
+					class="input"
+					placeholder="Enter message"
+				/>
+				<button id="send-message" class="send-btn">Send</button>
+			</section>
+		</div>
+	</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+	<script src="./app.js"></script>
+</html>
