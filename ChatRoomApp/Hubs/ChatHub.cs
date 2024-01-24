@@ -23,6 +23,7 @@ public class ChatHub : Hub
         await Clients.Others.SendAsync("ReceiveMessage", user, message);
     }
 
+    // Called by OnDisconnectedAsync method when a client logs off
     public async Task LeaveChat()
     {
         if (_connectedClients.TryGetValue(Context.ConnectionId, out string? user))
