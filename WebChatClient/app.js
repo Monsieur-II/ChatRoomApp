@@ -37,8 +37,6 @@ const joinChat = async (user) => {
 // fetching the username from session storage
 const getUser = () => sessionStorage.getItem("user_name");
 
-// Defines and executes Receive Message Api for JoinChat
-// Client is listening here (connection.on)
 const receiveMessage = async () => {
 	const currentUser = getUser();
 	if (!currentUser) return;
@@ -82,7 +80,7 @@ const sendingMessage = async (e) => {
 	if (!user) return;
 	const message = `${user}: ${textBox.value}`;
 	if (message) {
-		// call the sendMessage api
+		// call sendMessage
 		await sendMessage(user, message);
 
 		// now clear the textbox

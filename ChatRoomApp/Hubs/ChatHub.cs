@@ -19,6 +19,7 @@ public class ChatHub : Hub
     // *Client.Others*
     public async Task JoinChat(string user, string message)
     {
+        // add the user to the list of connected clients
         _connectedClients[Context.ConnectionId] = user;
         await Clients.Others.SendAsync("ReceiveMessage", user, message);
     }
